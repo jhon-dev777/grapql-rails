@@ -24,6 +24,16 @@ export const getInvoice = (invoiceId) => {
   return axios(buildQueryData);
 };
 
+export const createUser = (payload) => {
+  console.log(payload);
+  const data = {
+    query: `mutation{ createUser(input:{firstName:"${payload.firstName}", lastName: "${payload.lastName}", email: "${payload.email}", ci: ${payload.ci}, phone: ${payload.phone}}){user {id firstName} errors}}`,
+    value: null,
+  };
+  const buildQueryData = buildQuery(data, url);
+  return axios(buildQueryData);
+};
+
 const buildQuery = (query, url) => {
   return {
     url,

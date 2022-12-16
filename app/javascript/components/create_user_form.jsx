@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
-
+import { createUser } from "../services/api-service";
 class UserForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fistName: "",
+      firstName: "",
       lastName: "",
       email: "",
       ci: "",
@@ -24,7 +24,13 @@ class UserForm extends React.Component {
   }
 
   createUser = () => {
-    console.log(this.state);
+    createUser(this.state).then((data) => {
+      if (!data.data.errors) {
+        alert("save sussesfull");
+      } else {
+        alert("error, please check the data");
+      }
+    });
   };
 
   formStyle = {
@@ -43,8 +49,8 @@ class UserForm extends React.Component {
           <div style={this.formInputStyle}>
             <span className="p-float-label">
               <InputText
-                name="fistName"
-                value={this.state.fistName}
+                name="firstName"
+                value={this.state.firstName}
                 onChange={this.handleInputChange}
               />
               <label>First name</label>
