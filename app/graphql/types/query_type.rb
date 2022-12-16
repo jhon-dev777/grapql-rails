@@ -22,6 +22,12 @@ module Types
     def invoices
       Invoice.all
     end
+    field :invoice, Types::InvoiceType, null: false do
+      argument :id, ID, required:true 
+    end
+    def invoice(id:)
+      Invoice.find_by_id(id)
+    end
 
     field :sales, [Types::SaleType], null: false
     def sales
