@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'spa/index'
+  get 'spa/invoice'
+  get 'spa/create_user'
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
