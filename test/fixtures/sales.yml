@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: 1
+  products: MyString
+  total_amount: 1
+  promotion: one
+  user: one
+
+two:
+  code: 1
+  products: MyString
+  total_amount: 1
+  promotion: two
+  user: two
