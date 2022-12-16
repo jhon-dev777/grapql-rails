@@ -46,8 +46,8 @@ class Invoice extends React.Component {
           <h5>CI: {this.state.invoice?.user?.ci}</h5>
           <DataTable value={this.state.tableData} responsiveLayout="scroll">
             <Column field="id" header="Code"></Column>
-            <Column field="product" header="product"></Column>
-            <Column field="price" header="total"></Column>
+            <Column field="product" header="Product"></Column>
+            <Column field="price" header="Price"></Column>
           </DataTable>
           <h2>Total: ${this.state.invoice?.sale?.totalAmount}</h2>
         </Card>

@@ -11,14 +11,14 @@ User.create(
   first_name: 'jose',
   last_name: 'martinez',
   phone: 331431513,
-  email: 'pablo.perez@test.com'
+  email: 'jose.martinez@test.com'
 )
 User.create(
   ci: 400001,
   first_name: 'maria',
   last_name: 'aguilar',
   phone: 331431513,
-  email: 'pablo.perez@test.com'
+  email: 'maria.aguilar@test.com'
 )
 user = User.create(
   ci: 400001,
